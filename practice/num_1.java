@@ -8,7 +8,7 @@ public class num_1 {
         Map<Integer, Integer> numToIndexMap = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             if (numToIndexMap.containsKey(target - nums[i])) {
-                return new int[]{numToIndexMap.get(nums[i]), i};
+                return new int[]{numToIndexMap.get(target - nums[i]), i};
             } else {
                 numToIndexMap.put(nums[i], i);
             }
