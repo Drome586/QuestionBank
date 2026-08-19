@@ -3,7 +3,6 @@ package practice;
 import java.util.*;
 
 public class num_2 {
-    List<List<String>> result = new ArrayList<>();
     Map<String, List<String>> strToListMap = new HashMap<>();
 
     public List<List<String>> groupAnagrams(String[] strs) {
@@ -13,7 +12,7 @@ public class num_2 {
             String strKey = new String(charList);
             List<String> defaultList = strToListMap.getOrDefault(strKey, new ArrayList<>());
             defaultList.add(str);
-            strToListMap.put(strKey,defaultList);
+            strToListMap.put(strKey, defaultList);
         }
         return strToListMap.values().stream().toList();
     }
